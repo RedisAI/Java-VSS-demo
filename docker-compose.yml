@@ -1,0 +1,12 @@
+version: "3"
+services:
+  jupyter:
+    build: ./jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./GettingStarted.ipynb:/home/jovyan/GettingStarted.ipynb
+  vecsim:
+    image: redislabs/redisearch:2.4.3
+    ports:
+      - "6379:6379"
